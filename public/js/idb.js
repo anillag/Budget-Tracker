@@ -44,7 +44,7 @@ function checkDB() {
       })
         .then((response) => response.json())
         .then(() => {
-          const transaction = database.transaction(["savedData"], "readwrite");
+          const transaction = database.transaction(["savedData"], "readWrite");
           const store = transaction.objectStore("savedData");
           store.clear();
         });
